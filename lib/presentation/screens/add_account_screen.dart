@@ -304,9 +304,9 @@ class _AddAccountScreenState extends ConsumerState<AddAccountScreen> {
 
   String _getTokenLabel() {
     switch (_selectedPlatform) {
-      case AiPlatform.copilot:
+      case AiPlatform.github:
         return 'GitHub Access Token';
-      case AiPlatform.kiro:
+      case AiPlatform.codeium:
         return 'API Key';
       default:
         return 'Session Token / Cookie';
@@ -315,7 +315,7 @@ class _AddAccountScreenState extends ConsumerState<AddAccountScreen> {
 
   String _getTokenHint() {
     switch (_selectedPlatform) {
-      case AiPlatform.copilot:
+      case AiPlatform.github:
         return 'ghp_...';
       default:
         return 'Paste the token from your IDE settings';

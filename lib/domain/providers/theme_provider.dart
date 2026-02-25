@@ -8,18 +8,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-const _kThemeKey = 'cockpit_theme_mode';
-
-final themeModeProvider = StateNotifierProvider<ThemeModeNotifier, ThemeMode>((
-  ref,
-) {
+final themeModeProvider = NotifierProvider<ThemeModeNotifier, ThemeMode>(() {
   return ThemeModeNotifier();
 });
 
-class ThemeModeNotifier extends StateNotifier<ThemeMode> {
-  ThemeModeNotifier() : super(ThemeMode.dark) {
+class ThemeModeNotifier extends Notifier<ThemeMode> {
+  @override
+  ThemeMode build() {
     _load();
+    return ThemeMode.dark;
   }
+
+  static const _kThemeKey = 'cockpit_theme_mode';
 
   /// Load saved theme preference.
   Future<void> _load() async {

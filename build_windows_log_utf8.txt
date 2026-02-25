@@ -1,0 +1,14 @@
+﻿Building Windows application...                                 
+flutter : CMake Error: Error: generator platform: x64
+Au caractère Ligne:1 : 1
++ flutter build windows --debug > build_windows_log.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (CMake Error: Er. 
+   ..r platform: x64:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Does not match the platform used previously: 
+Either remove the CMakeCache.txt file and CMakeFiles 
+directory or choose a different binary directory.
+Building Windows application...                                    228ms
+Unable to generate build files

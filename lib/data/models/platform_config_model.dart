@@ -35,7 +35,7 @@ class PlatformConfig {
     return PlatformConfig(
       platform: AiPlatform.values.firstWhere(
         (p) => p.name == json['platform'],
-        orElse: () => AiPlatform.antigravity,
+        orElse: () => AiPlatform.anthropic,
       ),
       autoRefresh: json['auto_refresh'] as bool? ?? true,
       refreshIntervalMinutes: json['refresh_interval_minutes'] as int? ?? 5,
