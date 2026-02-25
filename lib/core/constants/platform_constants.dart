@@ -32,7 +32,7 @@ extension AiPlatformX on AiPlatform {
   };
 
   /// SVG asset path for the platform logo.
-  String get svgPath => 'assets/icons/${this.name}.svg';
+  String get svgPath => 'assets/icons/$name.svg';
 
   /// Icon used in platform cards as fallback.
   IconData get icon => switch (this) {

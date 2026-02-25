@@ -17,6 +17,7 @@ class SecureStorageService {
 
   /// Android-specific options for encrypted shared preferences.
   static const _androidOptions = AndroidOptions(
+    // ignore: deprecated_member_use
     encryptedSharedPreferences: true,
   );
 
